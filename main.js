@@ -31,28 +31,28 @@ function getRow(firstRow, secondRow) {
 }
 
 // Завдання 2
-function formattedPhone() {
-    let phone = prompt("Введіть номер телефону:");
-    let cleanedPhone = '';
-    for (let i = 0; i < phone.length; i++) {
-        if (!isNaN(phone[i]) && phone[i] !== ' ') {
-            cleanedPhone += phone[i];
+function formattedNumber() {
+    let number = prompt("Введіть номер телефону:");
+    let cleanedNumber = '';
+    for (let i = 0; i < number.length; i++) {
+        if (!isNaN(number[i]) && number[i] !== ' ') {
+            cleanedNumber += number[i];
         }
     }
-    phone = cleanedPhone;
+    number = cleanedNumber;
 
-    if (phone.length === 10 && phone.startsWith('0')) {
-        phone = '38' + phone;
+    if (number.length === 10 && number.startsWith('0')) {
+        number = '38' + number;
     }
 
-    if (phone.length === 12 && phone.startsWith('380')) {
-        phone = '+' + phone;
+    if (number.length === 12 && number.startsWith('380')) {
+        number = '+' + number;
     }
 
-    if (phone.length !== 13 || !phone.startsWith('+38')) {
+    if (number.length !== 13 || !number.startsWith('+38')) {
         alert("Формат телефону неправильний");
         return;
     }
 
-    alert(`${phone.slice(0, 3)} (${phone.slice(3, 6)}) ${phone.slice(6, 9)}-${phone.slice(9, 11)}-${phone.slice(11)}`);
+    alert(`${number.slice(0, 3)} (${number.slice(3, 6)}) ${number.slice(6, 9)}-${number.slice(9, 11)}-${number.slice(11)}`);
 }
