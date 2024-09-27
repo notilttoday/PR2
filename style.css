@@ -1,0 +1,14 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    width: 400px;
+    height: 200px;
+    background-color: rgb(241, 172, 44);
+    border-radius: 20px;
+    font-size: 30px;
+    margin: 100px 0;
+}
